@@ -6,6 +6,8 @@ import {ACCESS_TOKEN_COOKIE, LAST_STATE_COOKIE} from './constants';
 import Authorize from './Authorize';
 import Main from './Main';
 
+import './App.css';
+
 
 class App extends Component {
   constructor() {

@@ -1,1 +1,21 @@
+.space-item-action {
+  background-color: #CCC;
+  position: absolute;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  line-height: 15px;
+  font-size: 12px;
+  cursor: pointer;
+  z-index: 1000;
+  color: #999;
+}
 
+.delete-item {
+  right: 0;
+}
+
+.drag-item {
+  left: 0;
+}

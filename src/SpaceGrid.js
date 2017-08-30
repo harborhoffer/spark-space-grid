@@ -3,12 +3,10 @@
 import React, { Component } from 'react';
 import {Responsive, WidthProvider} from 'react-grid-layout';
 import SpaceItem from './SpaceItem';
+import {Glyphicon} from 'react-bootstrap';
 
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
 
-/**
- * This layout demonstrates how to use a grid with a dynamic number of elements.
- */
 class SpaceGrid extends Component {
   constructor(props) {
     super(props);
@@ -25,35 +23,30 @@ class SpaceGrid extends Component {
   onLayoutChange(layout) {
     console.log('Layout change', layout);
     this.props.onLayoutChange(layout);
-    //this.setState({layout: layout});
-    //console.log('Layout change', layout);
   }
 
   render() {
     return (
       <div>
-        <ResponsiveReactGridLayout onLayoutChange={this.onLayoutChange.bind(this)} onBreakpointChange={this.onBreakpointChange}
-            {...this.props}>
+        <ResponsiveReactGridLayout 
+          draggableHandle=".drag-item" 
+          onLayoutChange={this.onLayoutChange.bind(this)} 
+          onBreakpointChange={this.onBreakpointChange}
+          {...this.props}
+        >
           {this.props.selectedSpaces.map((el) => {
             return (
               <div key={el.i} data-grid={el} style={{background:'gray'}}>
                 <div 
-                  style={{
-                    backgroundColor: '#CCC',
-                    position: 'absolute',
-                    right: 0,
-                    top: 0,
-                    width: 15,
-                    height: 15,
-                    textAlign: 'center',
-                    lineHeight: '15px',
-                    fontSize: '12px',
-                    cursor: 'pointer',
-                    zIndex: 1000
-                  }}
+                  className="space-item-action drag-item"
+                >
+                  <Glyphicon glyph="fullscreen" />
+                </div>
+                <div 
+                  className="space-item-action delete-item"
                   onClick={this.props.onRemoveSpace.bind(this, el.i)}
                 >
-                  x
+                  <Glyphicon glyph="remove" />
                 </div>
                 <SpaceItem accessToken={this.props.accessToken} data={el} />
               </div>
