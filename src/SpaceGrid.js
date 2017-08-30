@@ -23,14 +23,16 @@ class SpaceGrid extends Component {
   }
 
   onLayoutChange(layout) {
-    //this.props.onLayoutChange(layout);
+    console.log('Layout change', layout);
+    this.props.onLayoutChange(layout);
     //this.setState({layout: layout});
+    //console.log('Layout change', layout);
   }
 
   render() {
     return (
       <div>
-        <ResponsiveReactGridLayout onLayoutChange={this.onLayoutChange} onBreakpointChange={this.onBreakpointChange}
+        <ResponsiveReactGridLayout onLayoutChange={this.onLayoutChange.bind(this)} onBreakpointChange={this.onBreakpointChange}
             {...this.props}>
           {this.props.selectedSpaces.map((el) => {
             return (

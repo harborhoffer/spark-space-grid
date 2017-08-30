@@ -1,4 +1,5 @@
 export const CLIENT_ID = 'YOUR_CLIENT_ID';
+export const APP_NAME = "Spark Space Grid";
 export const API_URL = 'https://api.ciscospark.com/v1';
 export const AUTH_URL = 'https://api.ciscospark.com/v1/authorize';
 export const AUTH_SCOPES = 'spark:all spark:kms';
