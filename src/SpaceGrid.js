@@ -38,15 +38,17 @@ class SpaceGrid extends Component {
             return (
               <div key={el.i} data-grid={el} style={{background:'gray'}}>
                 <div 
+                  title="Move space"
                   className="space-item-action drag-item"
                 >
                   <Glyphicon glyph="fullscreen" />
                 </div>
                 <div 
+                  title="Remove space"
                   className="space-item-action delete-item"
                   onClick={this.props.onRemoveSpace.bind(this, el.i)}
                 >
-                  <Glyphicon glyph="remove" />
+                  <Glyphicon glyph="trash" />
                 </div>
                 <SpaceItem accessToken={this.props.accessToken} data={el} />
               </div>
