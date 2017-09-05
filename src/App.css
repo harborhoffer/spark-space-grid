@@ -12,10 +12,29 @@
   color: #999;
 }
 
+.navbar-form .form-group {
+  margin: 0 10px;
+}
+
 .delete-item {
   right: 0;
 }
 
 .drag-item {
   left: 0;
+}
+
+/**
+  Widget style overrides
+**/
+.activity-item {
+  margin-top: 15px;
+}
+
+.ciscospark-activity-item-container {
+  padding-top: 0px;
+}
+
+.separator {
+  padding-top: 10px;
 }

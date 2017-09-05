@@ -10,8 +10,6 @@ import {
   Button
 } from 'react-bootstrap';
 
-import './NavigationBar.css';
-
 function NavigationBar(props) {
   function handleAddSpacesClick() {
     props.onAddSpacesClick();
