@@ -25,11 +25,16 @@ class AddSpaceModal extends Component {
       activeSpaces
     } = this.props;
 
-    const filteredSpaces = filter(spaces, (space) => {
+    // Sort spaces by last active date
+    const sortedSpaces = spaces.sort(
+      (date1, date2) => new Date(date2.lastActivity) - new Date(date1.lastActivity)
+    );
+
+    const filteredSpaces = filter(sortedSpaces, (space) => {
       if ( !find(activeSpaces, {'i': space.id}) ) {
         return space;
       }
-    })
+    });
     
     return filteredSpaces.map((space) => {
       return {value:space.id, label:space.title};
