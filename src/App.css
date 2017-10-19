@@ -24,6 +24,10 @@
   left: 0;
 }
 
+.react-grid-item > .react-resizable-handle {
+  z-index: 10000;
+}
+
 /**
   Widget style overrides
 **/
