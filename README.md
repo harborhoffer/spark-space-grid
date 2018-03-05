@@ -2,6 +2,9 @@
 
 A React application for creating persistent layouts of resizable/draggable Spark spaces in a grid.
 
+<!-- Markdown snippet -->
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/harborhoffer/spark-space-grid)
+
 ### `npm install`
 
 Install dependencies
